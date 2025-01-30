@@ -1,35 +1,4 @@
-<!DOCTYPE html>
-<html lang="zh">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>单词抽背</title>
-    <link rel="stylesheet" href="/py123/styles.css">
-</head>
-<body>
-    <div class="container">
-        <div class="input-section">
-            <h1>单词抽背</h1>
-            <textarea 
-                id="wordInput" 
-                placeholder="请输入单词，每行一个..."
-                rows="10">
-            </textarea>
-            <button id="startBtn" class="primary-btn">开始抽背</button>
-        </div>
-        
-        <div class="review-section" id="reviewSection">
-            <div class="word-display" id="wordDisplay">
-                <!-- 单词将在这里显示 -->
-            </div>
-            <div class="control-buttons">
-                <button id="nextBtn" class="secondary-btn">下一个</button>
-                <button id="endBtn" class="secondary-btn">结束抽背</button>
-            </div>
-        </div>
-    </div>
-    <script >
-        let words = [];
+let words = [];
 let currentIndex = 0;
 
 document.getElementById('startBtn').addEventListener('click', startReview);
@@ -94,6 +63,3 @@ function endReview() {
         document.getElementById('wordInput').value = '';
     }, 300);
 } 
-    </script>
-</body>
-</html> 
